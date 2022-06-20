@@ -7,10 +7,12 @@
     <title>Sigin In Page</title>
 
     <!-- Google Font: Source Sans Pro -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
@@ -26,9 +28,20 @@
                 width="150">
         </div>
         <div class="row flex-column justify-content-center align-items-center" style="height:90vh;">
-            <div class="card card-secondary" style="width:60vh;">
+            <div class="card card-secondary px-0" style="width:60vh;">
+                <?php
+                session_start();
+                 if(isset($_SESSION['error'])){
+                    print "
+                    <div class='alert alert-danger alert-dismissible'>
+                        <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+                        <strong>Error:</strong> ".$_SESSION['error']."
+                    </div>";
+                    unset($_SESSION['error']);
+                }
+                ?>
                 <div class=" card-header text-center">Admin Login</div>
-                <form action="./check/valdate_login.php" class="px-4" method="post">
+                <form action="valdate_login.php" class="px-4" method="post">
                     <div class="card-header text-center">
                         <input type="text" name="username" class="form-control my-3" placeholder="Username or Email">
                         <input type="password" name="pasword" class="form-control my-3" placeholder="Enter password">

@@ -104,13 +104,13 @@
                         <div class="col-md-6 col-sm-12">
                             <div class="card card-secondary">
                                 <div class="card-header">
-                                    <strong>Add New Produc</strong>
+                                    <strong>Add New Service</strong>
                                 </div>
                                 <div class="card-body">
-                                    <input type="text" name="prodName" placeholder="Product Name"
+                                    <input type="text" name="prodName" placeholder="Service Name"
                                         class="form-control my-2">
-                                    <input type="text" name="price" placeholder="Prodcut price"
-                                        class="form-control my-2">
+                                    <textarea type="text" name="price" placeholder="Description"
+                                        class="form-control my-2"></textarea>
                                 </div>
                             </div>
                         </div>
