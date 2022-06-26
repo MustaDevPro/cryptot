@@ -26,7 +26,7 @@
                         <h3>Services</h3>
                     </a></li>
                 <?php
-                    if(!$_SESSION['client']){
+                    if(!isset($_SESSION['client'])){
                         print "
                         <li><a href='signin.php'>
                             <h3>Login</h3>

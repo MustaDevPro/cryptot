@@ -90,7 +90,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="./logout.php" class="nav-link">
-                            <i class="fab fa-sign-out nav-icon"></i>
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
                             <p>Sign Out</p>
                         </a>
                     </li>

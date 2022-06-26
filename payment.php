@@ -39,7 +39,7 @@
                         <label for="floatingInputValue" class="text-white">Amount to be paid: <span class="text-danger"><?php print $_GET['price'];?></span></label>
                         <input type="hidden" name="amount" value="<?php print $_GET['price'];?>">
                         <input type="hidden" name="proid" value="<?php print $_GET['proid'];?>"><br>
-                        <label for="floatingInputValue" class="text-white">Product: <span class="text-danger"><?php print $_GET['proid'];?></span></label>
+                        <label for="floatingInputValue" class="text-white">Product: <span class="text-danger"><?php print $_GET['prodnm'];?></span></label>
 
                     </div>
                     <input type="submit" value="Pay Now" name="pay" class="btn btn-primary w-100">

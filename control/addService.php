@@ -99,8 +99,20 @@
 
             <!-- Main content -->
             <section class="content">
-                <form action="" method="post" encytype="form-data/mulitpart" class="p-0 m-0">
-                    <div class="row bg-info px-5">
+            <form action="./myservice.php" method="post" enctype="multipart/form-data" class="p-0 m-0">
+                    <?php if(isset($_SESSION['fail'])){
+                        ?>
+                        <div class="alert alert-danger alert-dismissible fade text-warning show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <strong>Error:</strong> <?php print $_SESSION['fail']; unset($_SESSION['fail']); ?>
+                    </div>
+                        <?php
+                    }?>
+                    
+                    <div class="row bg-dark px-5 my-3">
                         <div class="col-md-6 col-sm-12">
                             <div class="card card-secondary">
                                 <div class="card-header">
@@ -109,7 +121,7 @@
                                 <div class="card-body">
                                     <input type="text" name="prodName" placeholder="Service Name"
                                         class="form-control my-2">
-                                    <textarea type="text" name="price" placeholder="Description"
+                                    <textarea name="desc" placeholder="Description"
                                         class="form-control my-2"></textarea>
                                 </div>
                             </div>

@@ -147,7 +147,7 @@
                 
             </div>
             <!-- other section of services -->
- <div class="main-card" style="margin:auto;">
+ <div class="main-card row" style="margin:auto;">
              <div class="card" style="width:60vh;height:40vh; border-radius:5px; position:relative;">
                     <div class="card-content">
                         <h2>Programming</h2>

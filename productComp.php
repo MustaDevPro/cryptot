@@ -17,23 +17,25 @@
         border-radius:4px;
     }
  </style>
- <div class="overlay">
     <div class="row">
         <?php
-            for($i = 1; $i<=10; $i++){
+        require_once "config/config.php";
+        $sql = "SELECT * FROM `products`";
+        $res = mysqli_query($conn,$sql);
+        while($data = mysqli_fetch_array($res)){
                 ?>
                 <div class="col-md-2 col-sm-6 col-xl-4">
                     <div class="card">
                         <div class="card-body text-center">
                             <p>
-                                <img src="images/download.png" height="180" alt="">
+                                <img src="./assets/images/<?php print $data['img'];?>" width="100%" alt="">
                             </p>
                         </div>
                         <div class="card-footer text-center">
                             <div class="card-content text-center text-primary">
-                                <strong>Lorem, ipsum dolor.</strong>
+                                <strong><?php print $data['prodName'];?></strong>
                             </div>
-                            <a href="payment.php?proid=<?php print $i;?>&price=343" class="btn btn-success btn-btn rounded">Buy Now $5</a>
+                            <a href="details.php?proid=<?php print $data['proid'];?>" class="btn btn-success btn-btn rounded">View Details</a>
                         </div>
                     </div>
                 </div> 
@@ -41,4 +43,3 @@
             }
         ?>
     </div>
-</div> 

@@ -44,13 +44,7 @@
         }
         
     }
-    @media screen and (max-width:750) {
-         .home-products{
-            /* display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 3; */
-        }
-    }
+
 </style>
 </head>
 <body >
@@ -85,6 +79,7 @@
     ============================================================================================================================--> 
     <section class="main-heading">
     </section>
+    <div class="div" style="margin-bottom:1rem"></div>
     <?php require_once "productComp.php"; ?>
     <!-- [/Product component]
     ============================================================================================================================--> 

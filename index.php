@@ -1,4 +1,15 @@
 ﻿<!DOCTYPE html>
+<?php 
+    session_start();
+    require_once "./config/config.php";
+    if(!isset($_SESSION['visitor'])){
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $sql = "INSERT INTO `visitors`( `ipAdd`) VALUES ('$ip')";
+        if(mysqli_query($conn,$sql)){
+            $_SESSION['visitor'] = "True";
+        }
+    }
+?>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
